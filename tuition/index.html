@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Path Tuition Centre — SEE, +2 &amp; Computer Classes</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#2453d6;--blue2:#e9efff;--ink:#14213d;--muted:#5b6785;--yellow:#ffc93c;--line:#e3e8f4}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+  a{color:inherit}
+  .demo{background:var(--ink);color:#dfe6fb;font-size:13px;text-align:center;padding:8px 12px}
+  .demo a{color:var(--yellow);font-weight:700;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+  .logo{font-weight:800;font-size:21px;display:flex;align-items:center;gap:10px}
+  .logo i{width:36px;height:36px;border-radius:10px;background:var(--blue);display:grid;place-items:center;color:#fff;font-style:normal}
+  .links{display:flex;gap:26px;color:var(--muted);font-weight:500}
+  .links a{text-decoration:none}.links a:hover{color:var(--blue)}
+  .hero{background:linear-gradient(135deg,var(--blue2),#fff 70%);border-radius:30px;padding:64px 56px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;margin-bottom:40px}
+  .pill{display:inline-block;background:var(--yellow);padding:6px 14px;border-radius:99px;font-weight:700;font-size:13px;margin-bottom:16px}
+  h1{font-size:clamp(36px,5vw,56px);line-height:1.08;font-weight:800;margin-bottom:16px}
+  h1 span{color:var(--blue)}
+  .hero p{color:var(--muted);font-size:18px;margin-bottom:26px;max-width:480px}
+  .btn{display:inline-block;background:var(--blue);color:#fff;padding:14px 24px;border-radius:12px;font-weight:700;text-decoration:none}
+  .btn.light{background:#fff;color:var(--blue);border:2px solid var(--blue);margin-left:8px}
+  .board{background:#fff;border-radius:22px;padding:24px;box-shadow:0 20px 50px -20px rgba(36,83,214,.35)}
+  .board h4{margin-bottom:12px}
+  .row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  .row b{color:var(--blue)}
+  section{padding:60px 0}
+  h2{font-size:36px;font-weight:800;margin-bottom:6px}
+  .sub{color:var(--muted);margin-bottom:30px}
+  .courses{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .course{border:1px solid var(--line);border-radius:20px;padding:24px;transition:transform .15s,box-shadow .15s}
+  .course:hover{transform:translateY(-4px);box-shadow:0 14px 30px -16px rgba(20,33,61,.3)}
+  .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:14px}
+  .course h3{font-size:18px;margin-bottom:6px}.course p{color:var(--muted);font-size:14px;margin-bottom:10px}
+  .fee{font-weight:800;color:var(--blue);font-size:15px}
+  .results{background:var(--ink);color:#fff;border-radius:28px;padding:50px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .results b{font-size:42px;font-weight:800;color:var(--yellow);display:block}
+  .results small{color:#b8c3e3}
+  .faq details{border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:10px}
+  .faq summary{font-weight:700;cursor:pointer}
+  .faq p{color:var(--muted);margin-top:10px}
+  .enroll{display:grid;grid-template-columns:1fr 1fr;gap:30px;background:var(--blue2);border-radius:28px;padding:48px}
+  form{display:grid;gap:12px}
+  input,select{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:#fff}
+  form button{font:inherit;border:0;cursor:pointer}
+  #ok{display:none;background:#dff6e6;color:#17663a;padding:12px;border-radius:10px;font-weight:600}
+  footer{text-align:center;color:var(--muted);font-size:14px;padding:40px 20px}
+  @media(max-width:860px){.hero,.enroll{grid-template-columns:1fr;padding:32px}.courses{grid-template-columns:1fr 1fr}.results{grid-template-columns:1fr 1fr;padding:30px}.links{display:none}.btn.light{margin:10px 0 0}}
+  @media(max-width:520px){.courses{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo">Sample website — a demo made by Siddhu · <a href="../index.html">← Back to portfolio</a></div>
+<div class="wrap">
+  <nav>
+    <div class="logo"><i>✎</i>Bright Path</div>
+    <div class="links"><a href="#courses">Courses</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#enroll">Enroll</a></div>
+  </nav>
+  <header class="hero">
+    <div>
+      <span class="pill">New batch starts next week</span>
+      <h1>Better marks start with <span>better teaching.</span></h1>
+      <p>Small classes for SEE, +2 Science and Management, plus beginner computer and coding courses.</p>
+      <a class="btn" href="#enroll">Book a free demo class</a><a class="btn light" href="#courses">View courses</a>
+    </div>
+    <div class="board">
+      <h4>📅 Today's classes</h4>
+      <div class="row"><span>SEE Maths</span><b>6:30 AM</b></div>
+      <div class="row"><span>+2 Physics</span><b>8:00 AM</b></div>
+      <div class="row"><span>SEE Science</span><b>4:00 PM</b></div>
+      <div class="row"><span>Coding for Beginners</span><b>5:30 PM</b></div>
+      <div class="row" style="border:0"><span>English Speaking</span><b>6:30 PM</b></div>
+    </div>
+  </header>
+</div>
+
+<section id="courses"><div class="wrap">
+  <h2>Courses</h2><p class="sub">Monthly fees in NPR. Max 15 students per class.</p>
+  <div class="courses">
+    <div class="course"><div class="ic" style="background:#fff3d1">📘</div><h3>SEE Preparation</h3><p>Maths, Science, English. Weekly tests and model questions.</p><div class="fee">Rs 3,000 / month</div></div>
+    <div class="course"><div class="ic" style="background:#e9efff">🧪</div><h3>+2 Science</h3><p>Physics, Chemistry, Maths with lab-concept sessions.</p><div class="fee">Rs 4,500 / month</div></div>
+    <div class="course"><div class="ic" style="background:#e6f7ee">📊</div><h3>+2 Management</h3><p>Accounts, Economics and Business Maths.</p><div class="fee">Rs 4,000 / month</div></div>
+    <div class="course"><div class="ic" style="background:#fde8ec">💻</div><h3>Computer &amp; Coding</h3><p>MS Office, HTML, CSS and basic Python.</p><div class="fee">Rs 3,500 / month</div></div>
+  </div>
+</div></section>
+
+<section id="results"><div class="wrap">
+  <div class="results">
+    <div><b>8+</b><small>years teaching</small></div>
+    <div><b>1,200+</b><small>students taught</small></div>
+    <div><b>15</b><small>students per class, max</small></div>
+    <div><b>Weekly</b><small>tests &amp; parent updates</small></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap faq">
+  <h2>Questions parents ask</h2><p class="sub">Still unsure? Call us any time.</p>
+  <details><summary>Is the first class free?</summary><p>Yes. Every student can join one demo class before paying.</p></details>
+  <details><summary>Do you give progress reports?</summary><p>We run a test every Friday and send results to parents on WhatsApp.</p></details>
+  <details><summary>Can I pay through eSewa or Khalti?</summary><p>Yes, we accept eSewa, Khalti, bank transfer and cash.</p></details>
+</div></section>
+
+<section id="enroll"><div class="wrap">
+  <div class="enroll">
+    <div><h2>Book a free demo class</h2><p class="sub">Leave your details and we'll call you within a day.</p><p>📞 98XXXXXXXX<br>📍 Near City Chowk, Kathmandu</p></div>
+    <form id="f">
+      <input required placeholder="Student's name">
+      <input required placeholder="Parent's phone number">
+      <select required><option value="">Choose a course</option><option>SEE Preparation</option><option>+2 Science</option><option>+2 Management</option><option>Computer &amp; Coding</option></select>
+      <button class="btn" type="submit">Request demo class</button>
+      <div id="ok">Thanks! (Demo only — a real site would send this to the centre.)</div>
+    </form>
+  </div>
+</div></section>
+
+<footer>© Bright Path Tuition Centre · Demo website by Siddhu — business name and details are placeholders.</footer>
+<script>
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block';e.target.reset()});
+</script>
+</body>
+</html>

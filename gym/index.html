@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peak Strength Gym — Train Hard, Stay Strong</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0d0f0e;--panel:#161a18;--line:#252b28;--lime:#c6f432;--text:#eef2ee;--muted:#9aa49d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Archivo,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+  a{color:inherit}
+  .demo{background:var(--lime);color:#0d0f0e;font-size:13px;text-align:center;padding:8px 12px;font-weight:500}
+  .demo a{font-weight:700}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .logo{font-weight:900;font-size:22px;letter-spacing:.5px;text-transform:uppercase}
+  .logo span{color:var(--lime)}
+  .links{display:flex;gap:28px;color:var(--muted);font-weight:500}
+  .links a{text-decoration:none}.links a:hover{color:var(--lime)}
+  .hero{padding:70px 0 90px;position:relative}
+  .hero::after{content:"";position:absolute;right:-60px;top:20px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(198,244,50,.22),transparent 65%);z-index:-1}
+  h1{font-size:clamp(46px,8vw,96px);line-height:.95;font-weight:900;text-transform:uppercase;max-width:800px}
+  h1 span{color:var(--lime)}
+  .hero p{color:var(--muted);font-size:19px;max-width:520px;margin:24px 0 32px}
+  .btn{display:inline-block;background:var(--lime);color:#0d0f0e;padding:16px 28px;border-radius:8px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.5px}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line);margin-left:10px}
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .strip div{padding:26px 20px;border-right:1px solid var(--line)}
+  .strip div:last-child{border-right:0}
+  .strip b{font-size:34px;font-weight:900;color:var(--lime);display:block}
+  .strip small{color:var(--muted)}
+  section{padding:80px 0}
+  h2{font-size:42px;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:36px}
+  .classes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .class{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;transition:border-color .2s}
+  .class:hover{border-color:var(--lime)}
+  .class svg{width:38px;height:38px;margin-bottom:16px}
+  .class h3{font-size:19px;margin-bottom:6px}.class p{color:var(--muted);font-size:14px}
+  .toggle{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:4px;margin-bottom:28px}
+  .toggle button{font:inherit;font-weight:700;background:none;border:0;color:var(--muted);padding:10px 20px;border-radius:99px;cursor:pointer}
+  .toggle button.on{background:var(--lime);color:#0d0f0e}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .plan{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:32px}
+  .plan.best{border:2px solid var(--lime);position:relative}
+  .plan.best::before{content:"MOST POPULAR";position:absolute;top:-12px;left:28px;background:var(--lime);color:#0d0f0e;font-size:11px;font-weight:900;padding:4px 10px;border-radius:6px}
+  .plan h3{text-transform:uppercase;font-size:16px;color:var(--muted);margin-bottom:12px}
+  .amt{font-size:44px;font-weight:900}.amt small{font-size:15px;color:var(--muted);font-weight:500}
+  .plan ul{list-style:none;margin:20px 0 26px}
+  .plan li{padding:7px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .plan li::before{content:"✓ ";color:var(--lime);font-weight:900}
+  .plan .btn{width:100%;text-align:center}
+  .trainers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .trainer{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;gap:16px;align-items:center}
+  .av{width:62px;height:62px;border-radius:50%;background:var(--lime);color:#0d0f0e;display:grid;place-items:center;font-weight:900;font-size:22px;flex-shrink:0}
+  .trainer small{color:var(--muted)}
+  .cta{background:var(--lime);color:#0d0f0e;border-radius:24px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+  .cta h2{margin:0}.cta .btn{background:#0d0f0e;color:var(--lime)}
+  footer{color:var(--muted);text-align:center;padding:40px 20px;font-size:14px}
+  @media(max-width:860px){.classes,.plans,.trainers{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}.strip div:nth-child(2){border-right:0}.links{display:none}.btn.ghost{margin:10px 0 0}.cta{padding:32px}}
+</style>
+</head>
+<body>
+<div class="demo">Sample website — a demo made by Siddhu · <a href="../index.html">← Back to portfolio</a></div>
+<div class="wrap">
+  <nav>
+    <div class="logo">Peak<span>Strength</span></div>
+    <div class="links"><a href="#classes">Classes</a><a href="#plans">Membership</a><a href="#trainers">Trainers</a><a href="#join">Join</a></div>
+  </nav>
+  <header class="hero">
+    <h1>Train hard.<br><span>Get strong.</span></h1>
+    <p>Modern equipment, certified trainers and a community that keeps you showing up. First visit is free.</p>
+    <a class="btn" href="#join">Book free trial</a><a class="btn ghost" href="#plans">See prices</a>
+  </header>
+</div>
+<div class="wrap">
+  <div class="strip">
+    <div><b>5 AM</b><small>Opens daily</small></div>
+    <div><b>60+</b><small>Machines &amp; racks</small></div>
+    <div><b>4</b><small>Certified trainers</small></div>
+    <div><b>300+</b><small>Active members</small></div>
+  </div>
+</div>
+
+<section id="classes"><div class="wrap">
+  <h2>Classes</h2><p class="sub">Included with every membership.</p>
+  <div class="classes">
+    <div class="class"><svg viewBox="0 0 40 40" fill="none" stroke="#c6f432" stroke-width="3" stroke-linecap="round"><path d="M6 20h28M10 13v14M30 13v14M4 16v8M36 16v8"/></svg><h3>Strength</h3><p>Barbell basics, form checks and progressive plans.</p></div>
+    <div class="class"><svg viewBox="0 0 40 40" fill="none" stroke="#c6f432" stroke-width="3" stroke-linecap="round"><path d="M4 22h7l4-10 6 18 5-12h10"/></svg><h3>HIIT Cardio</h3><p>30-minute fat-burning sessions, morning and evening.</p></div>
+    <div class="class"><svg viewBox="0 0 40 40" fill="none" stroke="#c6f432" stroke-width="3" stroke-linecap="round"><circle cx="20" cy="9" r="4"/><path d="M20 13v12M10 19l10-3 10 3M14 36l6-11 6 11"/></svg><h3>Yoga &amp; Mobility</h3><p>Stretch, recover and move better.</p></div>
+    <div class="class"><svg viewBox="0 0 40 40" fill="none" stroke="#c6f432" stroke-width="3" stroke-linecap="round"><path d="M12 8l-4 8 6 4-2 12M28 8l4 8-6 4 2 12M14 20h12"/></svg><h3>Boxing Fit</h3><p>Pads, bag work and conditioning.</p></div>
+  </div>
+</div></section>
+
+<section id="plans"><div class="wrap">
+  <h2>Membership</h2><p class="sub">Simple prices in NPR. No hidden fees.</p>
+  <div class="toggle"><button class="on" data-t="std">Standard</button><button data-t="student">Student (–20%)</button></div>
+  <div class="plans">
+    <div class="plan"><h3>Monthly</h3><div class="amt" data-p="2500">Rs 2,500<small>/month</small></div><ul><li>Full gym access</li><li>All group classes</li><li>Locker</li></ul><a class="btn" href="#join">Choose</a></div>
+    <div class="plan best"><h3>3 Months</h3><div class="amt" data-p="6500">Rs 6,500<small>/3 months</small></div><ul><li>Everything in Monthly</li><li>1 personal training session</li><li>Diet guide</li></ul><a class="btn" href="#join">Choose</a></div>
+    <div class="plan"><h3>Yearly</h3><div class="amt" data-p="22000">Rs 22,000<small>/year</small></div><ul><li>Everything in 3 Months</li><li>Monthly progress check</li><li>Free gym T-shirt</li></ul><a class="btn" href="#join">Choose</a></div>
+  </div>
+</div></section>
+
+<section id="trainers"><div class="wrap">
+  <h2>Trainers</h2><p class="sub">Here to coach you, not just count reps.</p>
+  <div class="trainers">
+    <div class="trainer"><div class="av">AK</div><div><b>Trainer One</b><br><small>Strength &amp; powerlifting</small></div></div>
+    <div class="trainer"><div class="av">SR</div><div><b>Trainer Two</b><br><small>HIIT &amp; weight loss</small></div></div>
+    <div class="trainer"><div class="av">PM</div><div><b>Trainer Three</b><br><small>Yoga &amp; mobility</small></div></div>
+  </div>
+</div></section>
+
+<section id="join"><div class="wrap">
+  <div class="cta">
+    <div><h2>Your first visit is free</h2><p>Call 98XXXXXXXX or message us on WhatsApp to book.</p></div>
+    <a class="btn" href="https://wa.me/97798XXXXXXXX">Message on WhatsApp</a>
+  </div>
+</div></section>
+
+<footer>© Peak Strength Gym · Demo website by Siddhu — business name, people and details are placeholders.</footer>
+<script>
+const fmt=n=>'Rs '+n.toLocaleString('en-IN');
+document.querySelectorAll('.toggle button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.toggle button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const k=b.dataset.t==='student'?0.8:1;
+  document.querySelectorAll('.amt').forEach(a=>{const small=a.querySelector('small').outerHTML;a.innerHTML=fmt(Math.round(a.dataset.p*k/50)*50)+small});
+});
+</script>
+</body>
+</html>

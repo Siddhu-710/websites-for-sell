@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chiya Ghar Café — Tea, Coffee &amp; Momo</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#fbf5ec;--brown:#3b2418;--brown2:#6b4430;--saffron:#e0912f;--leaf:#4f6b3a;--line:#e8dccb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--brown);line-height:1.6}
+  a{color:inherit}
+  .demo{background:var(--brown);color:#f3e6d4;font-size:13px;text-align:center;padding:8px 12px}
+  .demo a{color:var(--saffron);font-weight:600;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+  .logo{font-family:Fraunces,serif;font-weight:800;font-size:24px;display:flex;align-items:center;gap:10px}
+  .logo svg{width:34px;height:34px}
+  .links{display:flex;gap:26px;font-weight:500;font-size:15px}
+  .links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1;color:var(--saffron)}
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:50px 0 80px}
+  .tag{display:inline-block;background:#f4e3cb;color:var(--brown2);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:600;margin-bottom:18px}
+  h1{font-family:Fraunces,serif;font-size:clamp(40px,6vw,64px);line-height:1.05;font-weight:800;margin-bottom:18px}
+  h1 em{font-style:normal;color:var(--saffron)}
+  .hero p{font-size:18px;color:var(--brown2);max-width:470px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--brown);color:var(--cream);padding:14px 26px;border-radius:12px;font-weight:600;text-decoration:none;margin-right:10px;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:transparent;border:2px solid var(--brown);color:var(--brown)}
+  .cup{aspect-ratio:1;border-radius:32px;background:radial-gradient(circle at 30% 25%,#f6c27a,#e0912f 45%,#9c5a22);display:grid;place-items:center;box-shadow:0 30px 60px -20px rgba(59,36,24,.45)}
+  .cup svg{width:62%}
+  section{padding:70px 0}
+  h2{font-family:Fraunces,serif;font-size:38px;margin-bottom:10px}
+  .sub{color:var(--brown2);margin-bottom:30px}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+  .tabs button{font:inherit;font-weight:600;border:2px solid var(--line);background:#fff;padding:9px 18px;border-radius:99px;cursor:pointer;color:var(--brown)}
+  .tabs button.on{background:var(--brown);color:var(--cream);border-color:var(--brown)}
+  .menu{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;justify-content:space-between;gap:16px}
+  .item h3{font-size:17px;margin-bottom:2px}.item p{font-size:14px;color:var(--brown2)}
+  .price{font-weight:700;color:var(--leaf);white-space:nowrap}
+  .about{background:var(--brown);color:var(--cream);border-radius:28px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .about h2{color:#fff}.about p{opacity:.85;margin-bottom:12px}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .stat{background:rgba(255,255,255,.07);border-radius:18px;padding:22px}
+  .stat b{font-family:Fraunces,serif;font-size:34px;color:var(--saffron);display:block}
+  .visit{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px}
+  .card h3{font-family:Fraunces,serif;margin-bottom:8px}
+  footer{text-align:center;padding:40px 20px;color:var(--brown2);font-size:14px;border-top:1px solid var(--line)}
+  @media(max-width:800px){.hero,.about{grid-template-columns:1fr}.links{display:none}.visit{grid-template-columns:1fr}.about{padding:32px}.cup{max-width:340px}}
+</style>
+</head>
+<body>
+<div class="demo">Sample website — a demo made by Siddhu · <a href="../index.html">← Back to portfolio</a></div>
+<div class="wrap">
+  <nav>
+    <div class="logo">
+      <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#3b2418"/><path d="M11 17h15v6a7 7 0 0 1-7 7h-1a7 7 0 0 1-7-7z" fill="#e0912f"/><path d="M26 19h2a3 3 0 0 1 0 6h-2" stroke="#e0912f" stroke-width="2" fill="none"/><path d="M15 9c0 2 2 2 2 4M19 9c0 2 2 2 2 4" stroke="#fbf5ec" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+      Chiya Ghar
+    </div>
+    <div class="links"><a href="#menu">Menu</a><a href="#about">Our story</a><a href="#visit">Visit</a></div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <span class="tag">☕ Open daily · 7 AM – 9 PM</span>
+      <h1>Your daily <em>chiya</em>, made the slow way.</h1>
+      <p>Fresh masala chiya, proper coffee and hand-folded momo, served in a cosy corner of the city.</p>
+      <a class="btn" href="#menu">See the menu</a>
+      <a class="btn ghost" href="#visit">Find us</a>
+    </div>
+    <div class="cup">
+      <svg viewBox="0 0 200 200"><ellipse cx="100" cy="160" rx="70" ry="12" fill="rgba(59,36,24,.25)"/><path d="M45 80h100v40a50 50 0 0 1-50 50 50 50 0 0 1-50-50z" fill="#fbf5ec"/><ellipse cx="95" cy="80" rx="50" ry="10" fill="#8a5326"/><path d="M145 92h10a18 18 0 0 1 0 36h-12" stroke="#fbf5ec" stroke-width="9" fill="none"/><path d="M75 30c0 12 12 12 12 24M100 22c0 12 12 12 12 24" stroke="#fbf5ec" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8"/></svg>
+    </div>
+  </header>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>Menu</h2>
+    <p class="sub">Prices in NPR, VAT included.</p>
+    <div class="tabs">
+      <button class="on" data-cat="drinks">Drinks</button>
+      <button data-cat="food">Food</button>
+      <button data-cat="sweet">Sweet</button>
+    </div>
+    <div class="menu" id="menuGrid"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <h2>Our story</h2>
+        <p>Chiya Ghar started as a small tea stall with one stove and a big kettle. Today it's a café where students, office workers and families come for the same thing: a good cup and a calm place to sit.</p>
+        <p>We buy our tea leaves from hill farms and grind our spices every morning.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>500+</b>cups a day</div>
+        <div class="stat"><b>12</b>types of momo</div>
+        <div class="stat"><b>Free</b>Wi-Fi</div>
+        <div class="stat"><b>4.8★</b>customer rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <h2>Visit us</h2>
+    <p class="sub">Walk in, or call ahead for group bookings.</p>
+    <div class="visit">
+      <div class="card"><h3>📍 Location</h3><p>Main Road, near City Chowk<br>Kathmandu, Nepal</p></div>
+      <div class="card"><h3>🕖 Hours</h3><p>Sun – Fri: 7 AM – 9 PM<br>Saturday: 8 AM – 10 PM</p></div>
+      <div class="card"><h3>📞 Contact</h3><p>98XXXXXXXX<br><a href="https://wa.me/97798XXXXXXXX">Message on WhatsApp</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>© Chiya Ghar Café · Demo website by Siddhu — business name and details are placeholders.</footer>
+
+<script>
+const menu={
+  drinks:[["Masala Chiya","Spiced milk tea, brewed fresh",60],["Black Tea","Hill-grown leaves, lemon optional",40],["Milk Coffee","Smooth and creamy",120],["Cappuccino","Double shot with foam",220],["Iced Lemon Tea","Cold, fresh, lightly sweet",150],["Lassi","Sweet yoghurt drink",160]],
+  food:[["Veg Momo","10 pcs, with tomato achar",180],["Chicken Momo","10 pcs, steamed or fried",220],["Jhol Momo","Momo in warm sesame soup",250],["Chowmein","Veg / chicken",180],["Sel Roti Plate","2 pcs with aloo tarkari",150],["Club Sandwich","Toasted, with fries",280]],
+  sweet:[["Chocolate Cake","Rich slice",200],["Juju Dhau","Bhaktapur-style yoghurt",120],["Banana Pancake","With honey",190],["Cookies","3 pcs, baked daily",90]]
+};
+const grid=document.getElementById('menuGrid');
+function show(cat){grid.innerHTML=menu[cat].map(([n,d,p])=>`<div class="item"><div><h3>${n}</h3><p>${d}</p></div><div class="price">Rs ${p}</div></div>`).join('')}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');show(b.dataset.cat)});
+show('drinks');
+</script>
+</body>
+</html>
